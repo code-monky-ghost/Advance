@@ -10,10 +10,12 @@ import java.util.Vector;
 
 public class MyChatServer extends Thread{
 	
+	//접속자를 위한 Vector
 	Vector<ChatHandler> v=new Vector<>(5, 3);
 	final int port=33333;
-	ServerSocket server;
+	ServerSocket server; 
 	
+	/**서버 시작*/
 	public MyChatServer() {
 		try {
 			server=new ServerSocket(port);
@@ -22,8 +24,8 @@ public class MyChatServer extends Thread{
 		} catch (IOException e) {
 			System.out.println("##채팅 서버 시작 중 예외 발생: "+e.getMessage()+"##");
 		}
-	}
-
+	}//-----------생성자
+	/**쓰레드 메소드*/
 	public void run() {
 		while(true) {
 			try {
