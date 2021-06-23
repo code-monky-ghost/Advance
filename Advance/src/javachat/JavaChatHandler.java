@@ -30,7 +30,7 @@ public class JavaChatHandler extends Thread {
 	}
 
 	public void run() {
-
+		//클라이언트가 먼저 접속하면 
 	}
 
 	public void process() {
