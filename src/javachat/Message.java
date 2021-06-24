@@ -1,5 +1,5 @@
 package javachat;
-import java.io.*;
+import java.io.Serializable;
 /*프로토콜 정의
 protocol: 통신 규약(통신할 때 정해놓은 약속)
 http, ftp, smtp, pop .....
@@ -83,7 +83,13 @@ public class Message implements Serializable{//오브젝트를 보내기 위함.
 	public void setFontRGB(int fontRGB) {
 		this.fontRGB = fontRGB;
 	}
+	@Override
+	public String toString() {
+		return "Message [code=" + code + ", msg=" + msg + ", id=" + id + ", nick=" + nick + ", fontRGB=" + fontRGB
+				+ "]";
+	}
 	
+	//toString() 메소드 오버라이드 (Object가 갖고 있는 메소드)
 	
 	
 	
