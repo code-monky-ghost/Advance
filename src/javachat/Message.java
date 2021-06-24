@@ -26,7 +26,7 @@ public class Message implements Serializable{//오브젝트를 보내기 위함.
 	public Message() {
 		
 	}
-	//Overload 전부 받아들이는 생성자
+	/**채팅창에 표시되는 생성자 (글자색상변경)*/
 	public Message(int code, String id, String nick, int fontRGB, String msg) {
 		super();
 		this.code = code;
@@ -45,7 +45,7 @@ public class Message implements Serializable{//오브젝트를 보내기 위함.
 	}
 	
 	
-		/***/
+		/**글자 색상 변경시 필요한 생성자*/
 	public Message(int code, String msg, int fontRGB) {
 			super();
 			this.code = code;
@@ -82,11 +82,6 @@ public class Message implements Serializable{//오브젝트를 보내기 위함.
 	}
 	public void setFontRGB(int fontRGB) {
 		this.fontRGB = fontRGB;
-	}
-	@Override
-	public String toString() {
-		return "Message [code=" + code + ", msg=" + msg + ", id=" + id + ", nick=" + nick + ", fontRGB=" + fontRGB
-				+ "]";
 	}
 	
 	//toString() 메소드 오버라이드 (Object가 갖고 있는 메소드)

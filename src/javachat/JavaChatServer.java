@@ -1,9 +1,8 @@
 package javachat;
-import java.net.*;
-import java.io.*;
-import java.util.*;
-
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Vector;
 
 public class JavaChatServer extends Thread {
    
@@ -21,7 +20,7 @@ public class JavaChatServer extends Thread {
 		System.out.println("##채팅 서버 시작 중 예외: "+e+"##");
 	}
    }
-   
+   /**클라이언트 서버의 작동*/
    public void run() {
       while (true) {
 		try {

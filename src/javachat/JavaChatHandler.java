@@ -110,7 +110,7 @@ public class JavaChatHandler extends Thread {
 		case 900: // 900인 경우에 break문이 없어서 800과 같은 값을 내보낸다.
 					// 클라이언트 => 서버에게 "900|아이디|대화명"↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 		case 800: {// 클라이언트 => 서버에게 "800|아이디|대화명"
-			// 모든 클에게 누가 퇴장한다고 알려주고,
+			// 모든 클라이언트에게 누가 퇴장한다고 알려주고,
 			this.sendMessageAll(data);
 			// userV에서 JavaChathandler 제거
 			userV.remove(this);
