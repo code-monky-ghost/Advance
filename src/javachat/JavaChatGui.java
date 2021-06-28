@@ -771,6 +771,8 @@ public class JavaChatGui extends javax.swing.JFrame implements Runnable {
 			listener.start();
 
 			// 입장 메세지를 서버에 보내자. "100|아이디|대화명 "
+			
+			
 			Message data = new Message(100, userId, nick);
 			out.writeObject(data);
 			out.flush();
